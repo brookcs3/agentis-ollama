@@ -10,7 +10,7 @@ Agentis is a powerful terminal-based AI coding assistant that seamlessly integra
 
 - 🧠 **Universal AI Support**
   - Works with any OpenAI-compatible API
-  - Supports Claude, GPT-4, Groq, Ollama, and more
+  - Supports Claude, GPT-4, Groq, Ollama, **Mistral Devstral**, and more
   - Easy provider switching with /model
 
 - 🛠️ **Intelligent Code Operations**
@@ -42,6 +42,9 @@ cd your-project
 
 # Launch Agentis
 agentis2
+
+# Use Devstral locally via Ollama
+agentis2 /model mistral-devstral
 ```
 
 ## 📖 Usage
@@ -51,6 +54,12 @@ agentis2
 1. Run `agentis2` in your project directory
 2. Configure your preferred AI provider using `/model`
 3. Initialize project-specific settings with `/init`
+
+### Using Mistral Devstral
+
+1. Install [Ollama](https://ollama.ai/) and pull the Devstral model
+2. Start Ollama with `ollama serve`
+3. Run `agentis2 /model mistral-devstral` to chat with Devstral offline
 
 ### Common Commands
 

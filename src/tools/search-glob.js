@@ -1,6 +1,5 @@
 // src/tools/search-glob.ts
-import { glob } from 'glob';
-import { stat } from 'fs/promises';
+import { searchFiles } from '../utils/search-files.js';
 import z from 'zod';
 
 const SearchGlobTool = {
@@ -23,16 +22,7 @@ const SearchGlobTool = {
   }),
 
   async run({ pattern, path = process.cwd() }) {
-    const matches = await glob(pattern, { cwd: path, nodir: true });
-    const withTimes = await Promise.all(
-      matches.map(async file => ({
-        file,
-        mtime: (await stat(`${path}/${file}`)).mtimeMs
-      }))
-    );
-    return withTimes
-      .sort((a, b) => b.mtime - a.mtime)
-      .map(entry => entry.file);
+    return searchFiles({ pattern, path });
   }
 };
 
