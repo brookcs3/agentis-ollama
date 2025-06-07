@@ -4,7 +4,6 @@
 
 
 **Your AI-Powered Development Companion**
-]
 Agentis is a powerful terminal-based AI coding assistant that seamlessly integrates with your development workflow. Supporting multiple AI providers through the OpenAI-compatible API standard, Agentis brings the power of AI directly to your terminal.
 
 ## ✨ Key Features
@@ -42,14 +41,14 @@ npm install -g agentis-cli
 cd your-project
 
 # Launch Agentis
-agentis
+agentis2
 ```
 
 ## 📖 Usage
 
 ### First-Time Setup
 
-1. Run `agentis` in your project directory
+1. Run `agentis2` in your project directory
 2. Configure your preferred AI provider using `/model`
 3. Initialize project-specific settings with `/init`
 
@@ -60,6 +59,7 @@ agentis
 - `/init` - Create project documentation
 - `/bug` - Report issues directly from CLI
 - `/config` - Adjust settings and preferences
+- `/tool Search` - Search files using the new Search tool
 
 
 ## 📝 License
