@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "tsx ./src/entrypoints/cli.tsx --verbose",
     "build": "bun build src/entrypoints/cli.tsx --minify --outfile cli.mjs --target=node",
-    "search": "node ./src/utils/search-files.js",
+    "search": "node ./src/tools/search-glob.js",
     "write": "node ./src/utils/write-file.js"
   },
   "optionalDependencies": {
